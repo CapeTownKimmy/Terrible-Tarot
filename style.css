@@ -30,16 +30,16 @@ body {
 
 #header {
 background-color: #080a40;
-height: 5.5rem;
+height: 8rem;
 width: 100%;
 }
 .titleText {
     font-family: 'Bigelow Rules', cursive;
     font-weight: 400;
-    font-size: 4rem;
+    font-size: 6rem;
     color: #d8b478;
-    margin-left: 3rem;
-    line-height: 5.5rem;
+    margin-left: 5rem;
+    line-height: 8rem;
 }
 
 
@@ -51,24 +51,38 @@ width: 100%;
     width: 100%;
 }
 .bodyText {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     font-family: 'Goudy Bookletter 1911', serif;
     color: #e9ecf2;
     font-weight: 400;
-    font-size: 1.8rem;
+    font-size: 2rem;
     text-align: center;
-    margin: 2.5rem 0;
+    margin-top: 4rem;
 }
+
+/* -------------- CARD STYLES -------------- */
+
 .cardGridContainer {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: grid;
-    grid-template-columns: repeat(5, 156px);
-    grid-template-rows: repeat(2, 300px);
+    max-width: 85rem;
+    margin: auto;
+    padding: 4rem 0;
+    grid-template-columns: repeat(auto-fill, 230px);
+    grid-template-rows: repeat(auto-fill, 410px);
+    gap: 1.3rem;
     align-items: center;
     justify-content: center;
 }
 .card {
-    border: 1px solid purple;
+    border: 15px solid #e9ecf2;
+    border-radius: 8px;
+    background-color: #e9ecf2;
+    background-image: url(./images/tarot-back-red-small.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 200px;
+    height: 380px;
 }
 
 
