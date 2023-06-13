@@ -1,0 +1,92 @@
+/* FONTS */
+
+/*font-family: 'Bigelow Rules', cursive;*/          /* Main Title */
+/*font-family: 'Goudy Bookletter 1911', serif;*/    /* Body Text */
+
+/* COLOURS */
+
+/* #2d1f8c - Vibrant Blue
+#080a40 - Deep Blue 
+#222559 - Lighter Blue 
+#181e40 - Darkest Blue 
+#e9ecf2 - Light Grey
+#a51d29 - Crimson Accent
+#d8b478 - Gold Accent */
+
+/* -------------- GLOBAL STYLES -------------- */
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+
+/* -------------- HEADER STYLES -------------- */
+
+#header {
+background-color: #080a40;
+height: 5.5rem;
+width: 100%;
+}
+.titleText {
+    font-family: 'Bigelow Rules', cursive;
+    font-weight: 400;
+    font-size: 4rem;
+    color: #d8b478;
+    margin-left: 3rem;
+    line-height: 5.5rem;
+}
+
+
+/* -------------- GAME BODY STYLES -------------- */
+
+#gameContainer {
+    background-color: #222559;
+    height: 100%;
+    width: 100%;
+}
+.bodyText {
+    border: 1px solid red;
+    font-family: 'Goudy Bookletter 1911', serif;
+    color: #e9ecf2;
+    font-weight: 400;
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 2.5rem 0;
+}
+.cardGridContainer {
+    border: 1px solid red;
+    display: grid;
+    grid-template-columns: repeat(5, 156px);
+    grid-template-rows: repeat(2, 300px);
+    align-items: center;
+    justify-content: center;
+}
+.card {
+    border: 1px solid purple;
+}
+
+
+/* -------------- FOOTER STYLES -------------- */
+
+#footer {
+    background-color: #080a40;
+    height: 5.5rem;
+    width: 100%;
+    }
+.footerText {
+    font-family: 'Goudy Bookletter 1911', serif;
+    color: #e9ecf2;
+    font-weight: 400;
+    font-size: .8rem;
+    line-height: 5.5rem;
+    text-align: center;
+}   
+.textHighlight {
+    color: #d8b478;
+} 
