@@ -118,7 +118,10 @@ width: 100%;
 /* For JAVASCRIPT - shows which cards are selected and which are not */
 .selected {
     mix-blend-mode: luminosity;
+    border-color: #d8b478;
+    background-color: #d8b478;
 }
+
 .hideMe {
     display: none;
 }

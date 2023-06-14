@@ -1,22 +1,28 @@
 const cardContainer = document.getElementById('cardGridContainer');
 const cards = cardContainer.querySelectorAll('.card');
-const selectedCards = cardContainer.querySelectorAll('.card.selected');
-
-// console.log(cardContainer);
-// console.log(cards);
-// console.log(selectedCards);
 
 
 // Show which cards user has selected on a click //
 
 cards.forEach(element => {
-    element.addEventListener('click', changeColor);
+    element.addEventListener('click', changeColor)
 })
 
 function changeColor(e) {
-    if(e.target.classList.contains('selected')) {
-        e.target.classList.remove('selected');
-    } else {
-        e.target.classList.add('selected');
-    } 
+    e.target.classList.toggle('selected')
+    cardCounter()
 }
+
+// Count how many cards have been selected and make submit button visible//
+
+function cardCounter(){
+    let maxClicked = cardContainer.querySelectorAll('.card.selected').length;
+    let notSelected = cardContainer.querySelectorAll('.card:not(.selected');
+    if(maxClicked >= 0 && maxClicked < 3) {
+        return   
+    } else {
+        notSelected.forEach(element => element.classList.add('hideMe'));
+    }
+}
+
+
