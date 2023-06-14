@@ -89,8 +89,8 @@ width: 100%;
 
 /* -------------- CARD STYLES -------------- */
 
-.cardGridContainer {
-    border: 1px solid red;
+#cardGridContainer {
+    /* border: 1px solid red; */
     max-width: 85rem;
     margin: auto;
     padding: 2rem 0;
