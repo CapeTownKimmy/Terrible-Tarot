@@ -203,7 +203,7 @@ width: 100%;
     text-align: center  
 }
 .flipCard:hover { /* Add in with javascript */
-    transform: rotateY(180deg);
+    /* transform: rotateY(180deg); */
 }
 
 
