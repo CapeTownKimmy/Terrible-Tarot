@@ -70,20 +70,32 @@ width: 100%;
     /* text-align: center; */
     /* margin-top: 4rem; */
 }
-.yesBtn {
+#resetBtn {
     border: 2px solid #e9ecf2;
     border-radius: 50%;
-    font-family: 'Goudy Bookletter 1911', serif;
-    color: #222559;
-    font-weight: 600;
-    font-size: 2rem;
+    /* font-family: 'Goudy Bookletter 1911', serif; */
+    /* color: #222559; */
+    /* font-weight: 600; */
+    /* font-size: 2rem; */
     /* margin-top: 4rem; */
     background-color: #d8b478;
     height: 4rem;
     width: 4rem;
-    text-align: center;
-    line-height: 4rem;
+    /* text-align: center; */
+    /* line-height: 4rem; */
     display: none;  /* ******JAVASCRIPT******* - to show once selection is made */
+}
+#resetBtn span {
+    font-size: 2.5rem;
+    color: #222559;
+    line-height: 4rem;
+    padding: 0 .71rem;
+    cursor: pointer;
+}
+#resetBtn:hover {
+    scale: 1.1;
+    transition: 400ms;
+    cursor: pointer; 
 }
 
 
@@ -109,6 +121,7 @@ width: 100%;
     background-size: contain;
     width: 200px;
     height: 380px;
+    cursor: pointer;
 }
 .card:hover {  /* JAVASCRIPT - Remove once selection made!! */
     scale: 1.04;
@@ -127,7 +140,26 @@ width: 100%;
 }
 
 
-
+/* -------------- MESSAGE BOX STYLES -------------- */
+#messageContainer {
+    position: absolute;
+    top: 61%;
+    left: 50%;
+    transform: translate(-50%);
+    min-width: 60%;
+    min-height: 25%;
+    background-color: #e9ecf2;
+    border: 6px solid #080a40;
+    border-radius: 10px;
+    display: none; /* JAVASCRIPT to display box */
+}
+.fortune {
+    font-family: 'Goudy Bookletter 1911', serif;
+    color: #222559;
+    font-weight: 600;
+    font-size: 1.5rem; 
+    padding: 2rem 2.5rem;
+}
 
 
 

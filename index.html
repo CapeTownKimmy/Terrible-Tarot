@@ -6,8 +6,9 @@
     <title>Terrible Tarot</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bigelow+Rules&family=Goudy+Bookletter+1911&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bigelow+Rules&family=Goudy+Bookletter+1911&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body>
     <header id="header">
@@ -17,7 +18,9 @@
     <section id="gameContainer">
         <div id="textContainer">
             <h2 class="bodyText">Pick 3 cards to know your unfortunate future</h2>
-            <p class="yesBtn">Y</p>
+            <p id="resetBtn">
+                <span class="material-symbols-outlined">undo</span>
+            </p>
         </div>
 
         <div id="cardGridContainer">
@@ -32,6 +35,10 @@
             <div class="card"></div>
             <div class="card"></div>
         </div>
+    </section>
+
+    <section id="messageContainer">
+        <p class="fortune">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum sunt illum, aspernatur velit eum quidem sint facilis natus quia magnam aperiam cumque vero provident repellendus eos impedit ratione asperiores iure.</p>
     </section>
 
     <footer id="footer">
