@@ -126,7 +126,7 @@ width: 100%;
 .card:hover {  /* JAVASCRIPT - Remove once selection made!! */
     scale: 1.04;
     transition: 400ms;
-}
+} 
 
 /* For JAVASCRIPT - shows which cards are selected and which are not */
 .selected {
@@ -134,9 +134,76 @@ width: 100%;
     border-color: #d8b478;
     background-color: #d8b478;
 }
-
 .hideMe {
     display: none;
+}
+
+/* -------------- FLIP CARD STYLES -------------- */
+#threeCardContainer {
+    border: 1px solid green;
+    width: 85rem;
+    height: 410px; 
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 1.3rem;
+    position: absolute;
+    top: 24.1%;
+    left: 50%;
+    transform: translate(-50%);
+    perspective: 500px;
+    visibility: hidden;
+}
+.flipCard {
+    border: 15px solid #e9ecf2;
+    border-radius: 8px;
+    background-color: #e9ecf2;
+    /* background-image: url(./images/tarot-back-red-small.png);
+    background-repeat: no-repeat;
+    background-size: contain; */ 
+    width: 200px;
+    height: 380px;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+    /* cursor: pointer; */
+}
+.front,
+.back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+.front {
+    /* border: 15px solid #e9ecf2; */
+    border-radius: 8px;
+    background-color: #e9ecf2;
+    background-image: url(./images/tarot-back-red-small.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.back {
+    /* border: 15px solid #e9ecf2; */
+    border-radius: 8px;
+    background-color: #e9ecf2;
+    transform: rotateY(180deg);
+}
+.image {
+    border: 1px solid green;
+    width: 200px;
+    height: 346px;
+}
+.cardText {
+    border: 1px solid green;
+    font-family: 'Goudy Bookletter 1911', serif;
+    color: #222559;
+    font-weight: 600;
+    font-size: 1.5rem; 
+    text-align: center  
+}
+.flipCard:hover { /* Add in with javascript */
+    transform: rotateY(180deg);
 }
 
 

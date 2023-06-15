@@ -20,11 +20,11 @@ function changeColor(e) {
 
 function cardCounter(){
     let maxClicked = cardContainer.querySelectorAll('.card.selected').length;
-    let notSelected = cardContainer.querySelectorAll('.card:not(.selected');
+    // let notSelected = cardContainer.querySelectorAll('.card:not(.selected');
     if(maxClicked >= 0 && maxClicked < 3) {
         return   
     } else {
-        notSelected.forEach(element => element.classList.add('hideMe'));
+        cards.forEach(element => element.classList.add('hideMe'));
         showBtnAndText();
     }
 }
@@ -33,8 +33,9 @@ function cardCounter(){
 
 function showBtnAndText() {
     resetBtn.style.display = 'block';
-    bodyText.innerHTML = 'Your misfortune awaits...';
+    bodyText.textContent = 'Your misfortune awaits...';
     textContainer.style.gap = '22rem'
+    cards.forEach(element => element.style.pointerEvents = 'none');
     showFortuneBox()
 }
 
@@ -45,12 +46,14 @@ resetBtn.addEventListener('click', refresh);
 function refresh(e) {
     cards.forEach(element => {
         element.classList.remove('hideMe', 'selected');
+        displayMessage.style.display = 'none';
+        cards.forEach(element => element.style.pointerEvents = 'auto');
         restoreBtnAndText()
     })
 }
 function restoreBtnAndText() {
     resetBtn.style.display = 'none';
-    bodyText.innerHTML = 'Pick 3 cards to know your unfortunate future';
+    bodyText.textContent = 'Pick 3 cards to know your unfortunate future';
     textContainer.style.gap = '8rem;';
 }
 
