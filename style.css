@@ -200,10 +200,7 @@ width: 100%;
     color: #222559;
     font-weight: 600;
     font-size: 1.5rem; 
-    text-align: center  
-}
-.flipCard:hover { /* Add in with javascript */
-    /* transform: rotateY(180deg); */
+    text-align: center;
 }
 
 
@@ -219,6 +216,7 @@ width: 100%;
     border: 6px solid #080a40;
     border-radius: 10px;
     display: none; /* JAVASCRIPT to display box */
+    /* opacity: 0; */
 }
 .fortune {
     font-family: 'Goudy Bookletter 1911', serif;
@@ -226,6 +224,16 @@ width: 100%;
     font-weight: 600;
     font-size: 1.5rem; 
     padding: 2rem 2.5rem;
+    animation: fadeIn 30s;
+    -webkit-animation: fadeIn 30s;
+    -moz-animation: fadeIn 30s;
+    -o-animation: fadeIn 30s;
+    -ms-animation: fadeIn 30s;
+}
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    30% {opacity: 1;}
+    100% {opacity: 1;}
 }
 
 

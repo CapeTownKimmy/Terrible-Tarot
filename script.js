@@ -7,6 +7,7 @@ const displayMessage = document.getElementById('messageContainer');
 const flipCardContainer = document.getElementById('threeCardContainer');
 const flipCard = document.querySelectorAll('.flipCard');
 
+
 // Show which cards user has selected on a click //
 
 cards.forEach(element => {
@@ -51,8 +52,9 @@ function refresh(e) {
         element.classList.remove('hideMe', 'selected');
         displayMessage.style.display = 'none';
         cards.forEach(element => element.style.pointerEvents = 'auto');
-
-        restoreBtnAndText()
+        flipCardContainer.style.visibility = 'hidden';
+        resetRotate();
+        restoreBtnAndText();
     })
 }
 function restoreBtnAndText() {
@@ -71,7 +73,6 @@ function showFortuneBox(){
 
 function showCards() {
     flipCardContainer.style.visibility = 'visible';
-    console.log(flipCard);
     flipOneAfterAnother()
 }
 function flipOneAfterAnother() {
@@ -79,5 +80,8 @@ function flipOneAfterAnother() {
     setTimeout(() => {flipCard[1].style.transform = 'rotateY(180deg)'}, 1300);
     setTimeout(() => {flipCard[2].style.transform = 'rotateY(180deg)'}, 2100);
 }
-
-// *******Clear timeout for reset!!
+function resetRotate () {
+    flipCard[0].style.transform = 'rotateY(0deg)';
+    flipCard[1].style.transform = 'rotateY(0deg)';
+    flipCard[2].style.transform = 'rotateY(0deg)';
+}
