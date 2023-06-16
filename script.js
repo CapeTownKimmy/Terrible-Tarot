@@ -8,8 +8,8 @@ const flipCardContainer = document.getElementById('threeCardContainer');
 const flipCard = document.querySelectorAll('.flipCard');
 
 
-// Show which cards user has selected on a click //
 
+// Show which cards user has selected on a click //
 cards.forEach(element => {
     element.addEventListener('click', changeColor)
 })
@@ -19,8 +19,9 @@ function changeColor(e) {
     cardCounter()
 }
 
-// Count how many cards have been selected and make submit button visible//
 
+
+// Count how many cards have been selected and make submit button visible//
 function cardCounter(){
     let maxClicked = cardContainer.querySelectorAll('.card.selected').length;
     if(maxClicked >= 0 && maxClicked < 3) {
@@ -30,8 +31,9 @@ function cardCounter(){
     }
 }
 
-// Show reset Button - once selection made //
 
+
+// Show reset Button - once selection made //
 function showFlipCards() {
     cards.forEach(element => element.classList.add('hideMe'));
     resetBtn.style.display = 'block';
@@ -43,8 +45,9 @@ function showFlipCards() {
     showFortuneBox()
 }
 
-// reset cards on click //
 
+
+// reset cards on click //
 resetBtn.addEventListener('click', refresh);
 
 function refresh(e) {
@@ -63,10 +66,8 @@ function restoreBtnAndText() {
     textContainer.style.gap = '8rem;';
 }
 
+
 // Show message box for display of fortune - once selection made //
-
-
-// *******Fade in with opacity!!
 function showFortuneBox(){
         displayMessage.style.display = 'block';
 }

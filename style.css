@@ -122,10 +122,12 @@ width: 100%;
     width: 200px;
     height: 380px;
     cursor: pointer;
+    box-shadow: 6px 6px 6px #080a40;
 }
 .card:hover {  /* JAVASCRIPT - Remove once selection made!! */
     scale: 1.04;
     transition: 400ms;
+    box-shadow: 8px 8px 12px #080a40;
 } 
 
 /* For JAVASCRIPT - shows which cards are selected and which are not */
@@ -157,16 +159,13 @@ width: 100%;
 .flipCard {
     border: 15px solid #e9ecf2;
     border-radius: 8px;
-    background-color: #e9ecf2;
-    /* background-image: url(./images/tarot-back-red-small.png);
-    background-repeat: no-repeat;
-    background-size: contain; */ 
+    background-color: #e9ecf2; 
     width: 200px;
     height: 380px;
     position: relative;
     transition: transform 1500ms;
     transform-style: preserve-3d;
-    /* cursor: pointer; */
+    box-shadow: 6px 6px 6px #080a40;
 }
 .front,
 .back {
