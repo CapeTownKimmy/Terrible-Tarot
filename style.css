@@ -142,7 +142,7 @@ width: 100%;
 
 /* -------------- FLIP CARD STYLES -------------- */
 #threeCardContainer {
-    border: 1px solid green;
+    /* border: 1px solid green; */
     width: 85rem;
     height: 410px; 
     display: flex;
@@ -189,12 +189,13 @@ width: 100%;
     transform: rotateY(180deg);
 }
 .image {
-    border: 1px solid green;
-    width: 200px;
+    border: 2px solid #080a40;
+    border-radius: 8px;
+    width: 198px;
     height: 346px;
 }
 .cardText {
-    border: 1px solid green;
+    /* border: 1px solid green; */
     font-family: 'Goudy Bookletter 1911', serif;
     color: #222559;
     font-weight: 600;
