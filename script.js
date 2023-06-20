@@ -96,9 +96,28 @@ const wasp = [
     'You are my every-sting!'
 ]
 
-drawCardOne();
-drawCardTwo();
-drawCardThree();
+// Random card draw functions //
+runDraw();
+
+function runDraw() {
+    drawCardOne();
+    drawCardTwo();
+    drawCardThree();
+    if(randomIndexZero === randomIndexOne) {
+        drawCardTwo();
+    }
+    if(randomIndexZero === randomIndexTwo) {
+        drawCardThree();
+    }
+    if(randomIndexOne === randomIndexTwo) {
+        drawCardThree();
+    }
+}
+
+
+
+
+
 
 
 // Show which cards user has selected on a click //
@@ -150,9 +169,7 @@ function refresh(e) {
         flipCardContainer.style.visibility = 'hidden';
         resetRotate();
         restoreBtnAndText();
-        drawCardOne();
-    drawCardTwo();
-    drawCardThree();
+        runDraw()
     })
 }
 function restoreBtnAndText() {
@@ -373,7 +390,3 @@ fortuneZero.textContent = greeting;
 fortuneOne.textContent = firstCardFortune;
 fortuneTwo.textContent = middleCardFortune;
 fortuneThree.textContent = lastCardFortune;
-
-// console.log(randomIndexZero);
-// console.log(randomIndexOne);
-// console.log(randomIndexTwo);
