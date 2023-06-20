@@ -7,9 +7,7 @@ const displayMessage = document.getElementById('messageContainer');
 const flipCardContainer = document.getElementById('threeCardContainer');
 const flipCard = document.querySelectorAll('.flipCard');
 
-let randomIndexZero
-let randomIndexOne
-let randomIndexTwo
+const cardSet = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 let firstCardFortune
 let middleCardFortune
@@ -96,24 +94,6 @@ const wasp = [
     'You are my every-sting!'
 ]
 
-// Random card draw functions - cant draw the same card in one turn//
-runDraw();
-
-function runDraw() {
-    drawCardOne();
-    drawCardTwo();
-    drawCardThree();
-    if(randomIndexZero === randomIndexOne) {
-        drawCardTwo();
-    }
-    if(randomIndexZero === randomIndexTwo) {
-        drawCardThree();
-    }
-    if(randomIndexOne === randomIndexTwo) {
-        drawCardThree();
-    }
-}
-
 
 // Show which cards user has selected on a click //
 cards.forEach(element => {
@@ -137,7 +117,8 @@ function cardCounter(){
     }
 }
 
-
+shuffleArr(cardSet);
+runDraw();
 
 // Show reset Button - once selection made //
 function showFlipCards() {
@@ -165,7 +146,8 @@ function refresh(e) {
         flipCardContainer.style.visibility = 'hidden';
         resetRotate();
         restoreBtnAndText();
-        runDraw()
+        shuffleArr(cardSet);
+        runDraw();
     })
 }
 function restoreBtnAndText() {
@@ -195,13 +177,35 @@ function resetRotate () {
     flipCard[2].style.transform = 'rotateY(0deg)';
 }
 
-// Randomly select a cards for index 0//
+// Random numbers and checks for same card draw//
 
+function shuffleArr(arr) {
+    let i = 0;
+    let j = 0;
+    let temp = null;
+
+    for (i = arr.length -1; i > 0; i -= 1) {
+        j = Math.floor(Math.random() * (i + 1));
+        temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+}
+
+
+// Find index for random numbers //
+function runDraw() {
+    drawCardOne();
+    drawCardTwo();
+    drawCardThree();
+}
+
+
+// Card 1//
 
 function drawCardOne() {
-    randomIndexZero = Math.floor((Math.random() * 8 + 1));
 
-    switch(randomIndexZero) {
+    switch(cardSet[0]) {
         case 0:
             imageZero.style.backgroundImage = 'url(./images/binoculars.jpg)';
             cardTextZero.textContent = 'The Binoculars';
@@ -258,13 +262,12 @@ function drawCardOne() {
 
 
 
-// Random selection of card two //
+//Card Two//
 
 
 function drawCardTwo() {
-    randomIndexOne = Math.floor((Math.random() * 8 + 1));
 
-    switch(randomIndexOne) {
+    switch(cardSet[1]) {
         case 0:
             imageOne.style.backgroundImage = 'url(./images/binoculars.jpg)';
             cardTextOne.textContent = 'The Binoculars';
@@ -321,12 +324,11 @@ function drawCardTwo() {
 
 
 
-// Random selection of card three //
+// Card Three //
 
 function drawCardThree() {
-    randomIndexTwo = Math.floor((Math.random() * 8 + 1));
 
-    switch(randomIndexTwo) {
+    switch(cardSet[2]) {
         case 0:
             imageTwo.style.backgroundImage = 'url(./images/binoculars.jpg)';
             cardTextTwo.textContent = 'The Binoculars';
