@@ -96,7 +96,7 @@ const wasp = [
     'You are my every-sting!'
 ]
 
-// Random card draw functions //
+// Random card draw functions - cant draw the same card in one turn//
 runDraw();
 
 function runDraw() {
@@ -113,11 +113,6 @@ function runDraw() {
         drawCardThree();
     }
 }
-
-
-
-
-
 
 
 // Show which cards user has selected on a click //
