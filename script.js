@@ -148,7 +148,8 @@ function showFlipCards() {
     showCards();
     textContainer.style.gap = '22rem'
     cards.forEach(element => element.style.pointerEvents = 'none');
-    showFortuneBox()
+    showFortuneBox();
+    displayFortune();
 }
 
 
@@ -381,7 +382,11 @@ function drawCardThree() {
 
 
 // Build Fortune //
-fortuneZero.textContent = greeting;
-fortuneOne.textContent = firstCardFortune;
-fortuneTwo.textContent = middleCardFortune;
-fortuneThree.textContent = lastCardFortune;
+
+
+function displayFortune() {
+    fortuneZero.textContent = greeting;
+    fortuneOne.textContent = firstCardFortune;
+    fortuneTwo.textContent = middleCardFortune;
+    fortuneThree.textContent = lastCardFortune;
+}
