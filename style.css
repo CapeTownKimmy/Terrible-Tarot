@@ -219,11 +219,15 @@ width: 100%;
     /* opacity: 0; */
 }
 .fortune {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
     font-family: 'Goudy Bookletter 1911', serif;
     color: #222559;
     font-weight: 600;
     font-size: 1.5rem; 
-    padding: 2rem 2.5rem;
+    padding: 1rem 2.5rem;
     animation: fadeIn 30s;
     -webkit-animation: fadeIn 30s;
     -moz-animation: fadeIn 30s;
@@ -235,7 +239,12 @@ width: 100%;
     30% {opacity: 1;}
     100% {opacity: 1;}
 }
-
+.fortuneZero {
+    margin-top: 1.7rem;
+}
+.fortuneOne {
+    margin-top: .7rem;
+}
 
 
 /* -------------- FOOTER STYLES -------------- */

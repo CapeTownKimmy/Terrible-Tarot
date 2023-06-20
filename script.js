@@ -10,71 +10,83 @@ const flipCard = document.querySelectorAll('.flipCard');
 
 //Fortune images for back face of cards//
 
-const imageZero = document.querySelector('.imageZero');
-const cardTextZero = document.querySelector('.textZero');
-const fortuneZero = document.querySelector('.fortuneZero');
+const imageZero = document.querySelector('.imageZero');         // Back face card 1 // 
+const cardTextZero = document.querySelector('.textZero');       // Back face card Text //
 
-const imageOne = document.querySelector('.imageOne');
-const cardTextOne = document.querySelector('.textOne');
-const fortuneOne = document.querySelector('.fortuneOne');
+const imageOne = document.querySelector('.imageOne');           // Back face card 2 // 
+const cardTextOne = document.querySelector('.textOne');         // Back face card Text //
 
-const imageTwo= document.querySelector('.imageTwo');
-const cardTextTwo = document.querySelector('.textTwo');
-const fortuneTwo = document.querySelector('.fortuneTwo');
+const imageTwo= document.querySelector('.imageTwo');            // Back face card 3 // 
+const cardTextTwo = document.querySelector('.textTwo');         // Back face card Text //
+
+const fortuneZero = document.querySelector('.fortuneZero');     // Fortune Display - Greeting //
+const fortuneOne = document.querySelector('.fortuneOne');       // Fortune Display - Card 1//
+const fortuneTwo = document.querySelector('.fortuneTwo');       // Fortune Display - Card 2//
+const fortuneThree = document.querySelector('.fortuneThree');   // Fortune Display - Card 3//
 
 const greeting = 'Welcome my unfortunate friend... you have chosen: ';
 
 
 // Fortune Maker Text - Card one, card two and card three//
 const binoculars = [
-    'The Binoculars. Nice from far but far from nice! Maybe ',
-    'Sentence 02',
-    'Sentence 03'
+    'The Binoculars',
+    'Nice from far but far from nice!',
+    'Yesterday, all my troubles seemed so far away... Look again, you are using your binoculars backwards!',
+    'Roses are red... my binoculars are blue. Your blinds are open, someones wahtching you!'
 ];
 const coffeeCup = [
-    'The Coffee Cup. More espresso, less depresso! Why not try',
-    'Sentence 02',
-    'Sentence 03'
+    'The Coffee Cup',
+    'More espresso, less depresso!',
+    'Better latte than never!',
+    'Deja Brew. You will recieve the wrong coffee order again!'
 ]
 const lobster = [
-    "The Lobster. Dont be so Shellfish, start",
-    'Sentence 02',
-    'Sentence 03'
+    'The Lobster',
+    "Don't be so shellfish. Would it kill you to crack a smile?",
+    'Nice to sea you. An old friend is back in town.',
+    'When life gives you lemons, order the lobster!'
 ];
 const mirror = [
-    'The Mirror. Mirror, Mirror, on the wall. What the hell happened! Expect some',
-    'Sentence 02',
-    'Sentence 03'
+    'The Mirror',
+    'Mirror, Mirror, on the wall. What the hell happened!',
+    "Hold a clock to your mirror, it's time for reflection",
+    'Objects in the rear view mirror may appear closer than they are... Run! While there is still time!'
 ]
 const skull = [
-    'The Skull. Bone Jour! There is a holiday on the horizon. Perhaps',
-    'Sentence 02',
-    'Sentence 03'
+    'The Skull',
+    'Bone Jour! There is a holiday on the horizon.',
+    "It's a no-brainer, you've lost your mind!",
+    'Bone appetit, enjoy your next meal. It could be your last!'
 ];
 const hotAirBalloon = [
-    'The Hot-Air Balloon. You are full of hot air with your head in the clouds, Maybe ',
-    'Sentence 02',
-    'Sentence 03'
+    'The Hot-Air Balloon',
+    'Want to hear a balloon joke? Nah, it will probably go over your head!',
+    'You are over inflated. Check your ego, amigo!',
+    'You are a basket-case! Get your head out of the clouds!'
 ]
 const stag = [
-    'The Stag. You are staggeringly vain, perhaps',
-    'Sentence 02',
-    'Sentence 03'
+    'The Stag',
+    "You are stag-geringly vain, doe not over do it!",
+    'Oh deer, what a year!',
+    "What is love? Baby don't herd me..."
 ];
 const microscope = [
-    'The Microscope. Your life is all out of focus! Soon ',
-    'Sentence 02',
-    'Sentence 03'
+    'The Microscope',
+    'When life gets blurry, adjust your focus!',
+    "Hocus, pocus. You've now lost your focus!",
+    "It's been scientifically proven that people who have more birthdays live longer. Keep up the good work."
 ]
 const musician = [
-    "The Musician, You're a treble maker! There are",
-    'Sentence 02',
-    'Sentence 03'
+    'The Musician',
+    "You're a treble maker!",
+    'Life without music would b flat! Buy a radio.',
+    'Warning! May contain sax and violins!'
 ];
 const wasp = [
-    'The Wasp. You are nothing more than a wanna-bee! Save yourself from',
-    'Sentence 02',
-    'Sentence 03'
+    'The Wasp',
+    'You are nothing more than a wanna-bee!',
+    'To bee or not to bee? Maybe just wing it...',
+    'You are my every-sting!'
 ]
 
 
@@ -159,62 +171,64 @@ function resetRotate () {
 }
 
 // Randomly select a cards for index 0//
+let firstCardFortune
+let middleCardFortune
+let lastCardFortune
+
 let randomIndexZero = Math.floor((Math.random() * 8 + 1));
 
 switch(randomIndexZero) {
     case 0:
         imageZero.style.backgroundImage = 'url(./images/binoculars.jpg)';
         cardTextZero.textContent = 'The Binoculars';
-        fortuneZero.textContent = greeting + binoculars[0];
+        firstCardFortune = binoculars[1];
         break;
     case 1:
         imageZero.style.backgroundImage = 'url(./images/coffee.jpg)';
         cardTextZero.textContent = 'The Coffee Cup';
-        fortuneZero.textContent = greeting + coffeeCup[0];
+        firstCardFortune = coffeeCup[1];
         break;
     case 2:
         imageZero.style.backgroundImage = 'url(./images/lobster.jpg)';
         cardTextZero.textContent = 'The Lobster';
-        fortuneZero.textContent = greeting + lobster[0];
+        firstCardFortune = lobster[1];
         break;
     case 3:
         imageZero.style.backgroundImage = 'url(./images/mirror.jpg)';
         cardTextZero.textContent = 'The Mirror';
-        fortuneZero.textContent = greeting + mirror[0];
+        firstCardFortune = mirror[1];
         break;
     case 4:
         imageZero.style.backgroundImage = 'url(./images/skull.jpg)';
         cardTextZero.textContent = 'The Skull';
-        fortuneZero.textContent = greeting + skull[0];
+        firstCardFortune = skull[1];
         break;
     case 5:
         imageZero.style.backgroundImage = 'url(./images/hotAirBalloon.jpg)';
         cardTextZero.textContent = 'The Hot-Air Balloon';
-        fortuneZero.textContent = greeting + hotAirBalloon[0];
-
+        firstCardFortune = hotAirBalloon[1];
         break;
     case 6:
         imageZero.style.backgroundImage = 'url(./images/stag.jpg)';
         cardTextZero.textContent = 'The Stag';
-        fortuneZero.textContent = greeting + stag[0];
+        firstCardFortune = stag[1];
         break;
     case 7:
         imageZero.style.backgroundImage = 'url(./images/microscope02.jpg)';
         cardTextZero.textContent = 'The Microscope';
-        fortuneZero.textContent = greeting + microscope[0]
+        firstCardFortune = microscope[1];
         break;
     case 8:
         imageZero.style.backgroundImage = 'url(./images/musician.jpg)';
         cardTextZero.textContent = 'The Musician';
-        fortuneZero.textContent = greeting + musician[0];
+        firstCardFortune = musician[1];
         break;
     case 9:
         imageZero.style.backgroundImage = 'url(./images/wasp.jpg)';
         cardTextZero.textContent = 'The Wasp';
-        fortuneZero.textContent = greeting + wasp[0];
+        firstCardFortune = wasp[1];
         break;
 }
-
 
 
 // Random selection of card two //
@@ -224,53 +238,52 @@ switch(randomIndexOne) {
     case 0:
         imageOne.style.backgroundImage = 'url(./images/binoculars.jpg)';
         cardTextOne.textContent = 'The Binoculars';
-        
+        middleCardFortune = binoculars[2];
         break;
     case 1:
         imageOne.style.backgroundImage = 'url(./images/coffee.jpg)';
         cardTextOne.textContent = 'The Coffee Cup';
-        
+        middleCardFortune = coffeeCup[2];
         break;
     case 2:
         imageOne.style.backgroundImage = 'url(./images/lobster.jpg)';
         cardTextOne.textContent = 'The Lobster';
-        
+        middleCardFortune = lobster[2];
         break;
     case 3:
         imageOne.style.backgroundImage = 'url(./images/mirror.jpg)';
         cardTextOne.textContent = 'The Mirror';
-        
+        middleCardFortune = mirror[2];
         break;
     case 4:
         imageOne.style.backgroundImage = 'url(./images/skull.jpg)';
         cardTextOne.textContent = 'The Skull';
-        
+        middleCardFortune = skull[2];
         break;
     case 5:
         imageOne.style.backgroundImage = 'url(./images/hotAirBalloon.jpg)';
         cardTextOne.textContent = 'The Hot-Air Balloon';
-        
-
+        middleCardFortune = hotAirBalloon[2];
         break;
     case 6:
         imageOne.style.backgroundImage = 'url(./images/stag.jpg)';
         cardTextOne.textContent = 'The Stag';
-        
+        middleCardFortune = stag[2];
         break;
     case 7:
         imageOne.style.backgroundImage = 'url(./images/microscope02.jpg)';
         cardTextOne.textContent = 'The Microscope';
-        
+        middleCardFortune = microscope[2];
         break;
     case 8:
         imageOne.style.backgroundImage = 'url(./images/musician.jpg)';
         cardTextOne.textContent = 'The Musician';
-        
+        middleCardFortune = musician[2];
         break;
     case 9:
         imageOne.style.backgroundImage = 'url(./images/wasp.jpg)';
         cardTextOne.textContent = 'The Wasp';
-        
+        middleCardFortune = wasp[2];
         break;
 }
 
@@ -282,52 +295,61 @@ switch(randomIndexTwo) {
     case 0:
         imageTwo.style.backgroundImage = 'url(./images/binoculars.jpg)';
         cardTextTwo.textContent = 'The Binoculars';
-        
+        lastCardFortune = binoculars[3];
         break;
     case 1:
         imageTwo.style.backgroundImage = 'url(./images/coffee.jpg)';
         cardTextTwo.textContent = 'The Coffee Cup';
-        
+        lastCardFortune = coffeeCup[3];
         break;
     case 2:
         imageTwo.style.backgroundImage = 'url(./images/lobster.jpg)';
         cardTextTwo.textContent = 'The Lobster';
-        
+        lastCardFortune = lobster[3];
         break;
     case 3:
         imageTwo.style.backgroundImage = 'url(./images/mirror.jpg)';
         cardTextTwo.textContent = 'The Mirror';
-        
+        lastCardFortune = mirror[3];
         break;
     case 4:
-        imageOne.style.backgroundImage = 'url(./images/skull.jpg)';
+        imageTwo.style.backgroundImage = 'url(./images/skull.jpg)';
         cardTextTwo.textContent = 'The Skull';
-        
+        lastCardFortune = skull[3];
         break;
     case 5:
         imageTwo.style.backgroundImage = 'url(./images/hotAirBalloon.jpg)';
         cardTextTwo.textContent = 'The Hot-Air Balloon';
-        
-
+        lastCardFortune = hotAirBalloon[3];
         break;
     case 6:
         imageTwo.style.backgroundImage = 'url(./images/stag.jpg)';
         cardTextTwo.textContent = 'The Stag';
-        
+        lastCardFortune = stag[3];
         break;
     case 7:
         imageTwo.style.backgroundImage = 'url(./images/microscope02.jpg)';
         cardTextTwo.textContent = 'The Microscope';
-        
+        lastCardFortune = microscope[3];
         break;
     case 8:
         imageTwo.style.backgroundImage = 'url(./images/musician.jpg)';
         cardTextTwo.textContent = 'The Musician';
-        
+        lastCardFortune = musician[3];
         break;
     case 9:
         imageTwo.style.backgroundImage = 'url(./images/wasp.jpg)';
         cardTextTwo.textContent = 'The Wasp';
-        
+        lastCardFortune = wasp[3];
         break;
 }
+
+// Build Fortune //
+fortuneZero.textContent = greeting;
+fortuneOne.textContent = firstCardFortune;
+fortuneTwo.textContent = middleCardFortune;
+fortuneThree.textContent = lastCardFortune;
+
+console.log(randomIndexZero);
+console.log(randomIndexOne);
+console.log(randomIndexTwo);
