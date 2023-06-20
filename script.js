@@ -7,6 +7,13 @@ const displayMessage = document.getElementById('messageContainer');
 const flipCardContainer = document.getElementById('threeCardContainer');
 const flipCard = document.querySelectorAll('.flipCard');
 
+let randomIndexZero
+let randomIndexOne
+let randomIndexTwo
+
+let firstCardFortune
+let middleCardFortune
+let lastCardFortune
 
 //Fortune images for back face of cards//
 
@@ -89,7 +96,9 @@ const wasp = [
     'You are my every-sting!'
 ]
 
-
+drawCardOne();
+drawCardTwo();
+drawCardThree();
 
 
 // Show which cards user has selected on a click //
@@ -141,6 +150,9 @@ function refresh(e) {
         flipCardContainer.style.visibility = 'hidden';
         resetRotate();
         restoreBtnAndText();
+        drawCardOne();
+    drawCardTwo();
+    drawCardThree();
     })
 }
 function restoreBtnAndText() {
@@ -171,178 +183,190 @@ function resetRotate () {
 }
 
 // Randomly select a cards for index 0//
-let firstCardFortune
-let middleCardFortune
-let lastCardFortune
 
-let randomIndexZero = Math.floor((Math.random() * 8 + 1));
 
-switch(randomIndexZero) {
-    case 0:
-        imageZero.style.backgroundImage = 'url(./images/binoculars.jpg)';
-        cardTextZero.textContent = 'The Binoculars';
-        firstCardFortune = binoculars[1];
-        break;
-    case 1:
-        imageZero.style.backgroundImage = 'url(./images/coffee.jpg)';
-        cardTextZero.textContent = 'The Coffee Cup';
-        firstCardFortune = coffeeCup[1];
-        break;
-    case 2:
-        imageZero.style.backgroundImage = 'url(./images/lobster.jpg)';
-        cardTextZero.textContent = 'The Lobster';
-        firstCardFortune = lobster[1];
-        break;
-    case 3:
-        imageZero.style.backgroundImage = 'url(./images/mirror.jpg)';
-        cardTextZero.textContent = 'The Mirror';
-        firstCardFortune = mirror[1];
-        break;
-    case 4:
-        imageZero.style.backgroundImage = 'url(./images/skull.jpg)';
-        cardTextZero.textContent = 'The Skull';
-        firstCardFortune = skull[1];
-        break;
-    case 5:
-        imageZero.style.backgroundImage = 'url(./images/hotAirBalloon.jpg)';
-        cardTextZero.textContent = 'The Hot-Air Balloon';
-        firstCardFortune = hotAirBalloon[1];
-        break;
-    case 6:
-        imageZero.style.backgroundImage = 'url(./images/stag.jpg)';
-        cardTextZero.textContent = 'The Stag';
-        firstCardFortune = stag[1];
-        break;
-    case 7:
-        imageZero.style.backgroundImage = 'url(./images/microscope02.jpg)';
-        cardTextZero.textContent = 'The Microscope';
-        firstCardFortune = microscope[1];
-        break;
-    case 8:
-        imageZero.style.backgroundImage = 'url(./images/musician.jpg)';
-        cardTextZero.textContent = 'The Musician';
-        firstCardFortune = musician[1];
-        break;
-    case 9:
-        imageZero.style.backgroundImage = 'url(./images/wasp.jpg)';
-        cardTextZero.textContent = 'The Wasp';
-        firstCardFortune = wasp[1];
-        break;
+function drawCardOne() {
+    randomIndexZero = Math.floor((Math.random() * 8 + 1));
+
+    switch(randomIndexZero) {
+        case 0:
+            imageZero.style.backgroundImage = 'url(./images/binoculars.jpg)';
+            cardTextZero.textContent = 'The Binoculars';
+            firstCardFortune = binoculars[1];
+            break;
+        case 1:
+            imageZero.style.backgroundImage = 'url(./images/coffee.jpg)';
+            cardTextZero.textContent = 'The Coffee Cup';
+            firstCardFortune = coffeeCup[1];
+            break;
+        case 2:
+            imageZero.style.backgroundImage = 'url(./images/lobster.jpg)';
+            cardTextZero.textContent = 'The Lobster';
+            firstCardFortune = lobster[1];
+            break;
+        case 3:
+            imageZero.style.backgroundImage = 'url(./images/mirror.jpg)';
+            cardTextZero.textContent = 'The Mirror';
+            firstCardFortune = mirror[1];
+            break;
+        case 4:
+            imageZero.style.backgroundImage = 'url(./images/skull.jpg)';
+            cardTextZero.textContent = 'The Skull';
+            firstCardFortune = skull[1];
+            break;
+        case 5:
+            imageZero.style.backgroundImage = 'url(./images/hotAirBalloon.jpg)';
+            cardTextZero.textContent = 'The Hot-Air Balloon';
+            firstCardFortune = hotAirBalloon[1];
+            break;
+        case 6:
+            imageZero.style.backgroundImage = 'url(./images/stag.jpg)';
+            cardTextZero.textContent = 'The Stag';
+            firstCardFortune = stag[1];
+            break;
+        case 7:
+            imageZero.style.backgroundImage = 'url(./images/microscope02.jpg)';
+            cardTextZero.textContent = 'The Microscope';
+            firstCardFortune = microscope[1];
+            break;
+        case 8:
+            imageZero.style.backgroundImage = 'url(./images/musician.jpg)';
+            cardTextZero.textContent = 'The Musician';
+            firstCardFortune = musician[1];
+            break;
+        case 9:
+            imageZero.style.backgroundImage = 'url(./images/wasp.jpg)';
+            cardTextZero.textContent = 'The Wasp';
+            firstCardFortune = wasp[1];
+            break;
+    }
+
 }
+
 
 
 // Random selection of card two //
-let randomIndexOne = Math.floor((Math.random() * 8 + 1));
 
-switch(randomIndexOne) {
-    case 0:
-        imageOne.style.backgroundImage = 'url(./images/binoculars.jpg)';
-        cardTextOne.textContent = 'The Binoculars';
-        middleCardFortune = binoculars[2];
-        break;
-    case 1:
-        imageOne.style.backgroundImage = 'url(./images/coffee.jpg)';
-        cardTextOne.textContent = 'The Coffee Cup';
-        middleCardFortune = coffeeCup[2];
-        break;
-    case 2:
-        imageOne.style.backgroundImage = 'url(./images/lobster.jpg)';
-        cardTextOne.textContent = 'The Lobster';
-        middleCardFortune = lobster[2];
-        break;
-    case 3:
-        imageOne.style.backgroundImage = 'url(./images/mirror.jpg)';
-        cardTextOne.textContent = 'The Mirror';
-        middleCardFortune = mirror[2];
-        break;
-    case 4:
-        imageOne.style.backgroundImage = 'url(./images/skull.jpg)';
-        cardTextOne.textContent = 'The Skull';
-        middleCardFortune = skull[2];
-        break;
-    case 5:
-        imageOne.style.backgroundImage = 'url(./images/hotAirBalloon.jpg)';
-        cardTextOne.textContent = 'The Hot-Air Balloon';
-        middleCardFortune = hotAirBalloon[2];
-        break;
-    case 6:
-        imageOne.style.backgroundImage = 'url(./images/stag.jpg)';
-        cardTextOne.textContent = 'The Stag';
-        middleCardFortune = stag[2];
-        break;
-    case 7:
-        imageOne.style.backgroundImage = 'url(./images/microscope02.jpg)';
-        cardTextOne.textContent = 'The Microscope';
-        middleCardFortune = microscope[2];
-        break;
-    case 8:
-        imageOne.style.backgroundImage = 'url(./images/musician.jpg)';
-        cardTextOne.textContent = 'The Musician';
-        middleCardFortune = musician[2];
-        break;
-    case 9:
-        imageOne.style.backgroundImage = 'url(./images/wasp.jpg)';
-        cardTextOne.textContent = 'The Wasp';
-        middleCardFortune = wasp[2];
-        break;
+
+function drawCardTwo() {
+    randomIndexOne = Math.floor((Math.random() * 8 + 1));
+
+    switch(randomIndexOne) {
+        case 0:
+            imageOne.style.backgroundImage = 'url(./images/binoculars.jpg)';
+            cardTextOne.textContent = 'The Binoculars';
+            middleCardFortune = binoculars[2];
+            break;
+        case 1:
+            imageOne.style.backgroundImage = 'url(./images/coffee.jpg)';
+            cardTextOne.textContent = 'The Coffee Cup';
+            middleCardFortune = coffeeCup[2];
+            break;
+        case 2:
+            imageOne.style.backgroundImage = 'url(./images/lobster.jpg)';
+            cardTextOne.textContent = 'The Lobster';
+            middleCardFortune = lobster[2];
+            break;
+        case 3:
+            imageOne.style.backgroundImage = 'url(./images/mirror.jpg)';
+            cardTextOne.textContent = 'The Mirror';
+            middleCardFortune = mirror[2];
+            break;
+        case 4:
+            imageOne.style.backgroundImage = 'url(./images/skull.jpg)';
+            cardTextOne.textContent = 'The Skull';
+            middleCardFortune = skull[2];
+            break;
+        case 5:
+            imageOne.style.backgroundImage = 'url(./images/hotAirBalloon.jpg)';
+            cardTextOne.textContent = 'The Hot-Air Balloon';
+            middleCardFortune = hotAirBalloon[2];
+            break;
+        case 6:
+            imageOne.style.backgroundImage = 'url(./images/stag.jpg)';
+            cardTextOne.textContent = 'The Stag';
+            middleCardFortune = stag[2];
+            break;
+        case 7:
+            imageOne.style.backgroundImage = 'url(./images/microscope02.jpg)';
+            cardTextOne.textContent = 'The Microscope';
+            middleCardFortune = microscope[2];
+            break;
+        case 8:
+            imageOne.style.backgroundImage = 'url(./images/musician.jpg)';
+            cardTextOne.textContent = 'The Musician';
+            middleCardFortune = musician[2];
+            break;
+        case 9:
+            imageOne.style.backgroundImage = 'url(./images/wasp.jpg)';
+            cardTextOne.textContent = 'The Wasp';
+            middleCardFortune = wasp[2];
+            break;
+    }
+    
 }
+
 
 
 // Random selection of card three //
-let randomIndexTwo = Math.floor((Math.random() * 8 + 1));
 
-switch(randomIndexTwo) {
-    case 0:
-        imageTwo.style.backgroundImage = 'url(./images/binoculars.jpg)';
-        cardTextTwo.textContent = 'The Binoculars';
-        lastCardFortune = binoculars[3];
-        break;
-    case 1:
-        imageTwo.style.backgroundImage = 'url(./images/coffee.jpg)';
-        cardTextTwo.textContent = 'The Coffee Cup';
-        lastCardFortune = coffeeCup[3];
-        break;
-    case 2:
-        imageTwo.style.backgroundImage = 'url(./images/lobster.jpg)';
-        cardTextTwo.textContent = 'The Lobster';
-        lastCardFortune = lobster[3];
-        break;
-    case 3:
-        imageTwo.style.backgroundImage = 'url(./images/mirror.jpg)';
-        cardTextTwo.textContent = 'The Mirror';
-        lastCardFortune = mirror[3];
-        break;
-    case 4:
-        imageTwo.style.backgroundImage = 'url(./images/skull.jpg)';
-        cardTextTwo.textContent = 'The Skull';
-        lastCardFortune = skull[3];
-        break;
-    case 5:
-        imageTwo.style.backgroundImage = 'url(./images/hotAirBalloon.jpg)';
-        cardTextTwo.textContent = 'The Hot-Air Balloon';
-        lastCardFortune = hotAirBalloon[3];
-        break;
-    case 6:
-        imageTwo.style.backgroundImage = 'url(./images/stag.jpg)';
-        cardTextTwo.textContent = 'The Stag';
-        lastCardFortune = stag[3];
-        break;
-    case 7:
-        imageTwo.style.backgroundImage = 'url(./images/microscope02.jpg)';
-        cardTextTwo.textContent = 'The Microscope';
-        lastCardFortune = microscope[3];
-        break;
-    case 8:
-        imageTwo.style.backgroundImage = 'url(./images/musician.jpg)';
-        cardTextTwo.textContent = 'The Musician';
-        lastCardFortune = musician[3];
-        break;
-    case 9:
-        imageTwo.style.backgroundImage = 'url(./images/wasp.jpg)';
-        cardTextTwo.textContent = 'The Wasp';
-        lastCardFortune = wasp[3];
-        break;
+function drawCardThree() {
+    randomIndexTwo = Math.floor((Math.random() * 8 + 1));
+
+    switch(randomIndexTwo) {
+        case 0:
+            imageTwo.style.backgroundImage = 'url(./images/binoculars.jpg)';
+            cardTextTwo.textContent = 'The Binoculars';
+            lastCardFortune = binoculars[3];
+            break;
+        case 1:
+            imageTwo.style.backgroundImage = 'url(./images/coffee.jpg)';
+            cardTextTwo.textContent = 'The Coffee Cup';
+            lastCardFortune = coffeeCup[3];
+            break;
+        case 2:
+            imageTwo.style.backgroundImage = 'url(./images/lobster.jpg)';
+            cardTextTwo.textContent = 'The Lobster';
+            lastCardFortune = lobster[3];
+            break;
+        case 3:
+            imageTwo.style.backgroundImage = 'url(./images/mirror.jpg)';
+            cardTextTwo.textContent = 'The Mirror';
+            lastCardFortune = mirror[3];
+            break;
+        case 4:
+            imageTwo.style.backgroundImage = 'url(./images/skull.jpg)';
+            cardTextTwo.textContent = 'The Skull';
+            lastCardFortune = skull[3];
+            break;
+        case 5:
+            imageTwo.style.backgroundImage = 'url(./images/hotAirBalloon.jpg)';
+            cardTextTwo.textContent = 'The Hot-Air Balloon';
+            lastCardFortune = hotAirBalloon[3];
+            break;
+        case 6:
+            imageTwo.style.backgroundImage = 'url(./images/stag.jpg)';
+            cardTextTwo.textContent = 'The Stag';
+            lastCardFortune = stag[3];
+            break;
+        case 7:
+            imageTwo.style.backgroundImage = 'url(./images/microscope02.jpg)';
+            cardTextTwo.textContent = 'The Microscope';
+            lastCardFortune = microscope[3];
+            break;
+        case 8:
+            imageTwo.style.backgroundImage = 'url(./images/musician.jpg)';
+            cardTextTwo.textContent = 'The Musician';
+            lastCardFortune = musician[3];
+            break;
+        case 9:
+            imageTwo.style.backgroundImage = 'url(./images/wasp.jpg)';
+            cardTextTwo.textContent = 'The Wasp';
+            lastCardFortune = wasp[3];
+            break;
+    }
 }
+
 
 // Build Fortune //
 fortuneZero.textContent = greeting;
@@ -350,6 +374,6 @@ fortuneOne.textContent = firstCardFortune;
 fortuneTwo.textContent = middleCardFortune;
 fortuneThree.textContent = lastCardFortune;
 
-console.log(randomIndexZero);
-console.log(randomIndexOne);
-console.log(randomIndexTwo);
+// console.log(randomIndexZero);
+// console.log(randomIndexOne);
+// console.log(randomIndexTwo);
