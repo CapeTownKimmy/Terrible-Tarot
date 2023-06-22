@@ -14,7 +14,7 @@ I opted to build a tarot card reading in which the user selects three cards. The
 
 ---
 Have your own fortune told now! [Terrible Tarot](https://capetownkimmy.github.io/Terrible-Tarot/)
-#### *Best played on your browser.*
+#### *Best played on your chrome browser. Not yet compatible for tablets or mobile*
 
 ![Game Screen Shot](./images/gameshot01.jpg)
 
