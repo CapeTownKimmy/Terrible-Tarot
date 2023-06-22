@@ -13,7 +13,7 @@ For this project, I had to build a message generator program. Everytime a user r
 I opted to build a tarot card reading in which the user selects three cards. The cards are then flipped over to reveal images as well as the users 'fortune'. I have tried to make the fortunes as nonsensical as possible. Offense is not intended.
 
 ---
-Have your own fortune told now! [Terrible Tarot]()
+Have your own fortune told now! [Terrible Tarot](https://capetownkimmy.github.io/Terrible-Tarot/)
 #### *Best played on your browser.*
 
 ![Game Screen Shot](./images/gameshot01.jpg)
